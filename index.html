@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Sanatan Videos | Creator Website</title>
+  <meta name="description" content="AI Sanatan Videos – AI Powered Sanatan Storyteller & Creator" />
+
+  <style>
+    :root{
+      /* ORANGE BASE + SANATAN COMBINATION */
+      --bg:#ff8c1a;          /* Bhagwa Orange */
+      --bg-soft:#fff3e0;     /* Soft cream */
+      --card:#ffffff;        /* White cards */
+      --accent:#c2410c;      /* Deep saffron */
+      --accent2:#7c2d12;     /* Maroon brown */
+      --text:#3b1d00;        /* Dark brown text */
+      --muted:#7a3e00;       /* Muted brown */
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto;
+      background:linear-gradient(180deg,#ff8c1a,#ffd8a8);
+      color:var(--text);
+      overflow-x:hidden;
+    }
+    a{text-decoration:none;color:inherit}
+
+    /* NAV */
+    header{
+      position:fixed;top:0;left:0;right:0;z-index:20;
+      display:flex;justify-content:space-between;align-items:center;
+      padding:18px 30px;
+      background:rgba(255,243,224,.85);
+      backdrop-filter:blur(10px)
+    }
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
+    .logo{
+      width:44px;height:44px;border-radius:50%;
+      background:#2b1400;
+      display:grid;place-items:center;
+      overflow:hidden;
+      box-shadow:0 6px 18px rgba(0,0,0,.25)
+    }
+    .logo img{
+      width:100%;height:100%;object-fit:cover
+    }
+    nav a{margin:0 14px;color:var(--muted);font-size:15px}
+
+    /* HERO */
+    .hero{
+      min-height:100vh;display:grid;place-items:center;
+      padding:120px 24px 80px;position:relative; background-position: fixed;
+    }
+    .hero::before{
+      content:"";position:absolute;inset:0;
+      background:radial-gradient(circle at center,rgba(139,92,246,.15),transparent 60%);
+      animation:pulse 6s infinite alternate
+    }
+    @keyframes pulse{from{opacity:.4}to{opacity:1}}
+
+    .hero-inner{
+      max-width:1100px;display:grid;grid-template-columns:1.1fr .9fr;
+      gap:60px;align-items:center;position:relative
+    }
+    .hero h1{
+      font-size:clamp(38px,6vw,66px);margin:0 0 16px
+    }
+    .gradient{
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      -webkit-background-clip:text;background-clip:text;color:transparent
+    }
+    .hero p{color:var(--muted);font-size:19px;line-height:1.7}
+    .cta{margin-top:28px;display:flex;gap:16px;flex-wrap:wrap}
+    .btn{
+      padding:14px 24px;border-radius:16px;font-weight:600;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      color:#000000
+    }
+    .ghost{background:var(--card)}
+
+    .avatar{
+      width:260px;height:260px;border-radius:50%;
+      background:#2b1400;
+      display:grid;place-items:center;
+      overflow:hidden;
+      box-shadow:0 0 80px rgba(124,45,18,.6)
+    }
+    .avatar img{
+      width:100%;height:100%;object-fit:cover
+    }
+
+    /* SECTIONS */
+    section{max-width:1200px;margin:auto;padding:100px 28px}
+    h2{text-align:center;font-size:38px;margin-bottom:14px}
+    .sub{text-align:center;color:var(--muted);margin-bottom:50px}
+
+    /* CARDS */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+    .card{
+      background:var(--card);
+      border-radius:26px;
+      padding:30px;
+      box-shadow:0 12px 40px rgba(124,45,18,.25);
+      transition:.4s
+    }
+    .card:hover{transform:translateY(-8px)}
+
+    /* STATS */
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+    .stat{background:var(--card);border-radius:24px;padding:26px;text-align:center}
+    .stat b{font-size:30px}
+
+    /* FOOTER */
+    footer{text-align:center;color:var(--muted);padding:50px 20px}
+
+    @media(max-width:900px){
+      .hero-inner{grid-template-columns:1fr;text-align:center}
+      .avatar{margin:auto}
+      .grid,.stats{grid-template-columns:1fr}
+      nav{display:none}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <div class="logo"><img src="img/Free.png" alt="AI Sanatan Videos Logo" /></div>
+    <span>AI Sanatan Videos</span>
+  </div>
+  <nav>
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#stats">Stats</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO / BANNER -->
+<section class="hero" style="background:url('img/baneer.png') center/cover no-repeat">
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,140,26,.75),rgba(241, 186, 5, 0.9))"></div>
+  <div class="hero-inner">
+    <div>
+      <h1>Main banata hoon<br/><span class="gradient">AI Powered Sanatan Stories • जय श्री राम</span></h1>
+      <p>
+        प्राचीन <b>सनातन ज्ञान</b> को आधुनिक <b>AI स्टोरीटेलिंग</b> के साथ
+        रामायण, महाभारत और गीता के सार को
+        शॉर्ट्स, रील्स और विज़ुअल कहानियों के रूप में प्रस्तुत करता हूँ —
+        खासकर <b>नई पीढ़ी</b> के लिए।
+        <br/><br/>
+        🚩 <b>जय श्री राम</b>
+      </p>
+      <div class="cta">
+        <a class="btn" href="#work">मेरा कार्य देखें</a>
+        <a class="btn ghost" href="#contact">संपर्क करें</a>
+      </div>
+    </div>
+    <div class="avatar"><img src="img/Free.png" alt="AI Sanatan Videos Logo" /></div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="work">
+  <h2>मेरा कार्य</h2>
+  <p class="sub">Short • Powerful • Meaningful</p>
+  <div class="grid">
+    <div class="card">🕉️ AI Sanatan Facts & Stories</div>
+    <div class="card">⚔️ Mahabharata & Ramayan Shorts</div>
+    <div class="card">🌌 Spiritual + Cosmic Visuals</div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>मेरे बारे में</h2>
+  <p class="sub">Creator • AI Storyteller • Sanatan Explorer</p>
+  <div class="grid">
+    <div class="card">
+      🙏 Namaste! Main **AI Sanatan Videos** hoon.
+      Mera goal hai Sanatan Dharma ko futuristic aur engaging digital form me
+      duniya tak pahunchana.
+    </div>
+    <div class="card">
+      🎯 Focus Areas:
+      <ul>
+        <li>AI Generated Storytelling</li>
+        <li>YouTube Shorts & Reels</li>
+        <li>Spiritual Visual Narratives</li>
+      </ul>
+    </div>
+    <div class="card">
+      🚀 Platforms:
+      <ul>
+        <li>YouTube</li>
+        <li>Instagram</li>
+        <li>Future OTT & Web</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="stats">
+  <h2>एक नज़र में</h2>
+  <div class="stats">
+    <div class="stat"><b>Daily</b><br/>Shorts</div>
+    <div class="stat"><b>AI</b><br/>Powered</div>
+    <div class="stat"><b>Sanatan</b><br/>Focused</div>
+    <div class="stat"><b>Multi</b><br/>Platform</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>संपर्क करें</h2>
+  <p class="sub">Brand • Collaboration • Growth (Hindi + English)</p>
+  <div style="text-align:center">
+    <a class="btn" href="https://www.youtube.com/@AISNATANVIDEOS" target="_blank">YouTube</a>
+    <a class="btn ghost" href="https://www.instagram.com/ai_sanatan_videos/" target="_blank">Instagram</a>
+    <a class="btn ghost" href="https://www.facebook.com/" target="_blank">Fack book</a>
+    <a class="btn ghost" href="#">Email</a>
+    <a class="btn ghost" href="tel:+ 7003535970">📞 Call Us</a>
+    <a ></a>
+  </div>
+</section>
+<!-- FLOATING WHATSAPP ICON -->
+<a href="https://wa.me/7003535970" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+<svg viewBox="0 0 32 32" width="30" height="30" fill="white" aria-hidden="true">
+<path d="M19.11 17.2c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.66.15-.2.3-.76.97-.93 1.17-.17.2-.34.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.48-1.75-1.65-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.34.45-.5.15-.17.2-.28.3-.47.1-.2.05-.37-.02-.52-.07-.15-.66-1.6-.9-2.2-.24-.58-.48-.5-.66-.5-.17 0-.37-.02-.57-.02-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.12 3.23 5.13 4.53.72.31 1.28.5 1.72.64.72.23 1.37.2 1.88.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.08-.12-.27-.2-.57-.35zM16.04 3C9.4 3 4 8.3 4 14.82c0 2.58.87 5.1 2.37 7.14L4 29l7.23-2.3c1.99 1.07 4.24 1.64 6.5 1.64 6.63 0 12.04-5.3 12.04-11.82C28.77 8.3 22.67 3 16.04 3zm0 23.7c-2.1 0-4.15-.55-5.96-1.6l-.43-.25-4.29 1.36 1.4-4.12-.28-.43c-1.38-1.98-2.1-4.3-2.1-6.7 0-6.03 4.98-10.94 11.66-10.94 6.68 0 11.66 4.91 11.66 10.94 0 6.03-4.98 10.94-11.66 10.94z"/>
+</svg>
+</a>
+
+
+<style>
+.whatsapp-float{
+position:fixed;
+right:20px;
+bottom:20px;
+width:64px;
+height:64px;
+border-radius:50%;
+background:#25D366;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 10px 30px rgba(0,0,0,.35);
+z-index:9999;
+transition:transform .3s ease, box-shadow .3s ease;
+}
+.whatsapp-float:hover{
+transform:scale(1.12);
+box-shadow:0 14px 40px rgba(0,0,0,.45);
+}
+</style>
+<footer>
+  © 2025 AI Sanatan Videos • KSS Productions
+</footer>
+
+</body>
+</html>
